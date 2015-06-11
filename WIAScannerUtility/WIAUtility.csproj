@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC85C85A-09D0-4A04-8B23-54087A44B6FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WIAUtility</RootNamespace>
+    <AssemblyName>WIAUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceSettings.cs" />
+    <Compile Include="Flags\AccessRights.cs" />
+    <Compile Include="Flags\AutoDeskew.cs" />
+    <Compile Include="Flags\Compression.cs" />
+    <Compile Include="Flags\ConnectionStatus.cs" />
+    <Compile Include="Flags\CurrentIntent.cs" />
+    <Compile Include="Flags\DataType.cs" />
+    <Compile Include="Flags\DocumentHandlingCapabilities.cs" />
+    <Compile Include="Flags\DocumentHandlingSelect.cs" />
+    <Compile Include="Flags\DocumentHandlingStatus.cs" />
+    <Compile Include="Flags\FilmScanMode.cs" />
+    <Compile Include="Flags\HardwareConfiguration.cs" />
+    <Compile Include="Flags\HorizontalRegistration.cs" />
+    <Compile Include="Flags\Lamp.cs" />
+    <Compile Include="Flags\MediaType.cs" />
+    <Compile Include="Flags\Mirror.cs" />
+    <Compile Include="Flags\OrientationAndRotation.cs" />
+    <Compile Include="Flags\PageSize.cs" />
+    <Compile Include="Flags\PhotometricInterpretation.cs" />
+    <Compile Include="Flags\Planar.cs" />
+    <Compile Include="Flags\Preview.cs" />
+    <Compile Include="Flags\PreviewType.cs" />
+    <Compile Include="Flags\SegmentationFilter.cs" />
+    <Compile Include="Flags\ShowPreviewControl.cs" />
+    <Compile Include="Flags\SuppressPropertyPage.cs" />
+    <Compile Include="Flags\TransferCapabilities.cs" />
+    <Compile Include="Flags\Transparency.cs" />
+    <Compile Include="Flags\TransparencyCapabilities.cs" />
+    <Compile Include="Flags\TransparencySelect.cs" />
+    <Compile Include="Flags\VerticalRegistration.cs" />
+    <Compile Include="PictureFormatID.cs" />
+    <Compile Include="PictureSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanner.cs" />
+    <Compile Include="ScannerSettings.cs" />
+    <Compile Include="WIADevice.cs" />
+    <Compile Include="WIAPropertyAttribute.cs" />
+    <Compile Include="WIASettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
