@@ -8,7 +8,7 @@ namespace WIAUtility
 {
     public class PictureSettings : WIASettings
     {
-		public PictureSettings(IProperties properties)
+        public PictureSettings(IProperties properties)
 			: base(properties)
 		{ }
 

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using WIAUtility;
 
 namespace AmcAllscriptsScanning
 {
@@ -19,7 +20,7 @@ namespace AmcAllscriptsScanning
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Image> images = new WIAScannerUtility.Scanner().Scan();
+            Scanner scanner = new Scanner();
         }
     }
 }

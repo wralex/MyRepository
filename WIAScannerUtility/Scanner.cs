@@ -12,16 +12,24 @@ namespace WIAUtility
     public class Scanner
     {
 		public Device Device { get; private set; }
-		public ScannerSettings DeviceSettings { get; private set; }
+		public ScannerSettings Settings { get; private set; }
         public ScannerPicSettings PictureSettings { get; private set; }
 
-        public Scanner(Device device)
+        public Scanner()
 		{
-			this.Device = device;
-			this.DeviceSettings = new ScannerSettings(device.Properties);
-            this.PictureSettings = new ScannerPicSettings(device.Items[1].Properties);
+            initiate((new WIA.CommonDialog()).ShowSelectDevice(WiaDeviceType.ScannerDeviceType, false, false));
 		}
+        public Scanner(Device device)
+        {
+            initiate(device);
+        }
 
+        private void initiate(Device device)
+        {
+            this.Device = device;
+            this.Settings = new ScannerSettings(device.Properties);
+            this.PictureSettings = new ScannerPicSettings(device.Items[1].Properties);
+        }
 
         public IEnumerable<Image> PerformScan(PictureFormatID formatID = PictureFormatID.wiaFormatBMP)
 		{
