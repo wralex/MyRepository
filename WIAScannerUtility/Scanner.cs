@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace WIAUtility
 		}
 
 
-        public IEnumerable<Image> PerformScan(string formatID = PictureFormatID.wiaFormatTIFF)
+        public IEnumerable<Image> PerformScan(PictureFormatID formatID = PictureFormatID.wiaFormatBMP)
 		{
-			ImageFile imageFile = (ImageFile)this.Device.Items[1].Transfer(formatID);
+            ImageFile imageFile = (ImageFile)this.Device.Items[1].Transfer(_Utility.GetDescriptionAttributeValue(formatID));
 			return Scanner.ExtractImages(imageFile);
 		}
 

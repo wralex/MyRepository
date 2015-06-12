@@ -197,12 +197,6 @@ namespace WIAUtility
 			get { return this.GetPropertyValue<string>(4125); }
 		} /*WIA_IPA_ITEM_CATEGORY*/  // 0x101d
 
-
-		/// <summary>
-		/// Upload Item Size
-		/// The UploadItemSize property is used by applications to specify the number of bytes to upload for an item. The application creates and maintains this property.
-		/// Versions: Available on Windows Vista and later operating systems.
-		/// </summary>
 		[WIAProperty(4126)]
 		public int UploadItemSize
 		{
@@ -210,25 +204,12 @@ namespace WIAUtility
 			set { this.SetPropertyValue(4126,value); }
 		} /*WIA_IPA_UPLOAD_ITEM_SIZE*/  // 0x101e
 
-
-		/// <summary>
-		/// Items Stored
-		/// The ItemsStored property specifies how many items are stored in the storage (WIA_CATEGORY_FOLDER) item. The WIA minidriver creates and maintains this WIA property. 
-		/// Versions: Available in Windows Vista and later versions of the operating system. 
-		/// </summary>
 		[WIAProperty(4127)]
 		public int ItemsStored
 		{
 			get { return this.GetPropertyValue<int>(4127); }
 		} /*WIA_IPA_ITEMS_STORED*/  // 0x101f
 
-
-		/// <summary>
-		/// Raw Bits Per Channel
-		/// The RawBitsPerChannel property contains the number of bits in each color channel. 
-		/// The RawBitsPerChannel property should be reported as a vector that contains as many byte values as there are channels, where the first byte corresponds to the number of bits in the first channel, the second byte to the number of bits in the second channel, and so on. The vector must contain as many entries as the WIA_IPA_CHANNELS_PER_PIXEL property reports there are channels. The driver sets WIA_IPA_CHANNELS PER_PIXEL when the application sets WIA_IPA_FORMAT to WiaImgFmt_RAW.
-		/// RawBitsPerChannel is similar to the WIA_IPA_BITS_PER_CHANNEL property (which is used for formats other than RAW).
-		/// </summary>
 		[WIAProperty(4128)]
 		public UInt16 RawBitsPerChannel
 		{

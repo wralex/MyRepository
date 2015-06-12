@@ -78,6 +78,7 @@
     <Compile Include="WIADevice.cs" />
     <Compile Include="WIAPropertyAttribute.cs" />
     <Compile Include="WIASettings.cs" />
+    <Compile Include="_Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WIA">
