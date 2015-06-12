@@ -33,9 +33,9 @@ namespace WIAUtility
             throw new ArgumentException("The Scanner is unavailable.");
         }
 
-        public static ScannerDevice AsScannerDevice(this Device device)
+        public static Scanner AsScanner(this Device device)
         {
-            return new ScannerDevice(device);
+            return new Scanner(device);
         }
     }
 }
