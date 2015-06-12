@@ -22,5 +22,11 @@ namespace AmcAllscriptsScanning
         {
             Scanner scanner = new Scanner();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WebCam cam = new WebCam();
+            String[] s = cam.GetConnectedCameras();
+        }
     }
 }

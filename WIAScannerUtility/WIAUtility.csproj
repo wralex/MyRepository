@@ -76,6 +76,7 @@
     <Compile Include="Scanner.cs" />
     <Compile Include="ScannerPicSettings.cs" />
     <Compile Include="ScannerSettings.cs" />
+    <Compile Include="WebCam.cs" />
     <Compile Include="WIADevice.cs" />
     <Compile Include="WIAPropertyAttribute.cs" />
     <Compile Include="WIASettings.cs" />
@@ -84,6 +85,15 @@
   <ItemGroup>
     <COMReference Include="WIA">
       <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WIAVIDEOLib">
+      <Guid>{1320AD9E-A50F-4ED0-B1A4-4E45EC25005E}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
