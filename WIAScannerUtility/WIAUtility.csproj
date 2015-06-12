@@ -74,6 +74,7 @@
     <Compile Include="PictureSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scanner.cs" />
+    <Compile Include="ScannerPicSettings.cs" />
     <Compile Include="ScannerSettings.cs" />
     <Compile Include="WIADevice.cs" />
     <Compile Include="WIAPropertyAttribute.cs" />

@@ -13,13 +13,13 @@ namespace WIAUtility
     {
 		public Device Device { get; private set; }
 		public ScannerSettings DeviceSettings { get; private set; }
-        public ScannerPictureSettings PictureSettings { get; private set; }
+        public ScannerPicSettings PictureSettings { get; private set; }
 
         public Scanner(Device device)
 		{
 			this.Device = device;
 			this.DeviceSettings = new ScannerSettings(device.Properties);
-            this.PictureSettings = new ScannerPictureSettings(device.Items[1].Properties);
+            this.PictureSettings = new ScannerPicSettings(device.Items[1].Properties);
 		}
 
 
