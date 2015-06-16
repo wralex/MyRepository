@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmcAllscriptsScanning", "Am
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WIAUtility", "WIAScannerUtility\WIAUtility.csproj", "{DC85C85A-09D0-4A04-8B23-54087A44B6FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User32API", "User32API\User32API.csproj", "{E3BEECF7-C2CF-4698-9804-0953DC4384D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DC85C85A-09D0-4A04-8B23-54087A44B6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC85C85A-09D0-4A04-8B23-54087A44B6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC85C85A-09D0-4A04-8B23-54087A44B6FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3BEECF7-C2CF-4698-9804-0953DC4384D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3BEECF7-C2CF-4698-9804-0953DC4384D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3BEECF7-C2CF-4698-9804-0953DC4384D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3BEECF7-C2CF-4698-9804-0953DC4384D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
