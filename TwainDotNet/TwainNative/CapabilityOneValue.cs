@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 using TwainDotNet.Win32;
-using log4net;
 
 namespace TwainDotNet.TwainNative
 {

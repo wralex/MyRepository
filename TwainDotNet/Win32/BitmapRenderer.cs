@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using log4net;
 
 namespace TwainDotNet.Win32
 {
@@ -11,7 +10,6 @@ namespace TwainDotNet.Win32
         /// <summary>
         /// The logger for this class.
         /// </summary>
-        static ILog log = LogManager.GetLogger(typeof(BitmapRenderer));
 
         IntPtr _dibHandle;
         IntPtr _bitmapPointer;
@@ -26,7 +24,6 @@ namespace TwainDotNet.Win32
 
             _bitmapInfo = new BitmapInfoHeader();
             Marshal.PtrToStructure(_bitmapPointer, _bitmapInfo);
-            log.Debug(_bitmapInfo.ToString());
 
             _rectangle = new Rectangle();
             _rectangle.X = _rectangle.Y = 0;

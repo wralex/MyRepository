@@ -2,16 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using TwainDotNet.TwainNative;
-using log4net;
 
 namespace TwainDotNet
 {
     public class Capability
     {
-        /// <summary>
-        /// The logger for this class.
-        /// </summary>
-        static ILog log = LogManager.GetLogger(typeof(Capability));
 
         Identity _applicationId;
         Identity _sourceId;
@@ -43,9 +38,6 @@ namespace TwainDotNet
             {
                 var conditionCode = GetStatus();
 
-                log.Debug(string.Format("Failed to get capability:{0} reason: {1}", 
-                    _capability, conditionCode));
-
                 return new BasicCapabilityResult()
                 {
                     ConditionCode = conditionCode,
@@ -73,9 +65,6 @@ namespace TwainDotNet
 
         protected void SetValue<T>(T value)
         {
-            log.Debug(string.Format("Attempting to set capabilities:{0}, value:{1}, type:{1}",
-                _capability, value, _twainType));
-
             int rawValue = Convert.ToInt32(value);
             var oneValue = new CapabilityOneValue(_twainType, rawValue);
             var twainCapability = TwainCapability.From(_capability, oneValue);
@@ -90,30 +79,16 @@ namespace TwainDotNet
 
             if (result != TwainResult.Success)
             {
-                log.Debug(string.Format("Failed to set capabilities:{0}, value:{1}, type:{1}, result:{2}",
-                    _capability, value, _twainType, result));
-
                 if (result == TwainResult.Failure)
                 {
                     var conditionCode = GetStatus();
 
-                    log.Error(string.Format("Failed to set capabilites:{0} reason: {1}",
-                        _capability, conditionCode));
-
                     throw new TwainException("Failed to set capability.", result, conditionCode);
-                }
-                else if (result == TwainResult.CheckStatus)
-                {
-                    log.Debug("Value changed but not to requested value");
                 }
                 else
                 {
                     throw new TwainException("Failed to set capability.", result);
                 }
-            }
-            else
-            {
-                log.Debug("Set capabilities successfully");
             }
         }
 
