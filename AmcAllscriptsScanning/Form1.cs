@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using WIAUtility;
+using WinControl;
+using WinControl.Enums;
 
 namespace AmcAllscriptsScanning
 {
@@ -31,6 +33,8 @@ namespace AmcAllscriptsScanning
         private void button2_Click(object sender, EventArgs e)
         {
             IEAccessible ieEclipse = new IEAccessible(@"https://eod1.eclipseppm.com/");
+            ieEclipse.SetIEWindowState(WINDOW_STATE.SW_SHOWMAXIMIZED);
+            ieEclipse.BringTabForward();
         }
 
 
